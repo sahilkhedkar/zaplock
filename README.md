@@ -1,1 +1,5 @@
-This project is a password generator that allows users to create secure passwords with various options for customization.
+
+What is Zaplock? => Zaplock is a free and open-source password generator that allows you to generate secure passwords with customizable options.
+
+Zaplock => https://zaplock.vercel.app/
+
