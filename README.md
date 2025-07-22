@@ -3,3 +3,4 @@ What is Zaplock? => Zaplock is a free and open-source password generator that al
 
 Zaplock => https://zaplock.vercel.app/
 
+Tech Stack => React, Tailwind CSS, Framer Motion
