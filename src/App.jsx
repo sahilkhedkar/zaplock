@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 function App() {
   const [length, setLength] = useState(16);
-  const [numAllowed, setnumAllowed] = useState(true);
+  const [numAllowed, setnumAllowed] = useState(false);
   const [charAllowed, setcharAllowed] = useState(false);
   const [password, setPassword] = useState('');
   const [copied, setCopied] = useState(false);
