@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import { SplashScreen } from './components/animation';
 
 function App() {
   const [length, setLength] = useState(8);
@@ -6,6 +8,12 @@ function App() {
   const [charAllowed, setcharAllowed] = useState(false);
   const [password, setPassword] = useState('');
   const [copied, setCopied] = useState(false);
+   const [showSplash, setShowSplash] = useState(true);
+
+    useEffect(() => {
+    const timer = setTimeout(() => setShowSplash(false), 2500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const passwordRef = useRef(null);
 
@@ -39,6 +47,12 @@ function App() {
   }, [password]);
 
   return (
+    <>
+     <AnimatePresence>
+        {showSplash && <SplashScreen />}
+      </AnimatePresence>
+
+      
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#0d0d0d] via-[#1c052d] to-[#3a0ca3] px-4 relative">
       
       
@@ -109,6 +123,7 @@ function App() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
